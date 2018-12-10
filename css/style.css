@@ -285,7 +285,8 @@ section {
   #works .works-box {
     width: 100%;
     height: auto;
-    padding: 5px 20px; } }
+    box-sizing: border-box;
+    padding: 2px 10px; } }
 #contact ul {
   text-align: center;
   margin-top: 60px; }
@@ -434,17 +435,20 @@ header {
     .work-b table {
       display: block;
       width: 100%;
-      margin: 0; }
+      margin: 0;
+      border: 0; }
       .work-b table tr {
         display: block;
         width: 100%; }
         .work-b table tr th {
           display: block;
           width: 100%;
-          padding: 10px 0; }
+          padding: 10px 0;
+          border: 0; }
         .work-b table tr td {
           display: block;
           width: 100%;
-          padding: 10px 0; } }
+          padding: 10px 0;
+          border: 0; } }
 
 /*# sourceMappingURL=style.css.map */
