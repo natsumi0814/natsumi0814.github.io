@@ -249,11 +249,12 @@ section {
     }
 
 @media(max-width:550px){
+text-align:center;
 #profile{
   table{
     text-align:center;
     display:block;
-    margin:20px 100px;
+    margin:20px auto;
     border:0;
     tr{
       display:block;
