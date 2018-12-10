@@ -1,0 +1,572 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #6b3038;
+$keyColor: #eb6a7a;
+$fontColor: #4c4c4c;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header
+------------------------------------------------------------*/
+.button-contact {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border: 2px solid $fontColor;
+  color: $fontColor;
+  text-align: center;
+  display: block;
+  float: right;
+  @include border-radius(4px);
+  font-size: 20px;
+  line-height: 0;
+  margin: 20px 20px 0 0;
+  &:visited {
+    color: $fontColor;
+  }
+  &:hover, &:active {
+    background-color: $fontColor;
+    color: #FFF;
+  }
+}
+header {
+  .profile {
+    width: 60%;
+    margin: 0 auto;
+    padding: 60px 0;
+    clear: both;
+  }
+  .site-title {
+    font-size: 1.8rem;
+    line-height: normal;
+    span {
+      display: block;
+      font-size: 4.2rem;
+      color: $keyColor;
+    }
+  }
+  .profile-icon {
+    @include border-radius(50%);
+    padding:10px;
+    margin: 30px auto;
+    border:dashed 2px #eb6a7a;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  padding: 60px 0;
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+  h2 {
+    @extend .abel;
+    font-size: 3.2rem;
+    @extend .uppercase;
+  }
+}
+
+// Skills
+#skills {
+  background-color: $subColor;
+  .container {
+    @include display-flex;
+    justify-content: space-between;
+  }
+  h2 {
+    color: $baseColor;
+    margin-bottom: 60px;
+  }
+  .skill-box {
+    @include flex(1);
+    margin: 10px 10px;
+    padding: 20px;
+    background-color: $baseColor;
+    @include border-radius(4px);
+    @include box-sizing(border-box);
+  }
+  i {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
+    padding-top: 15px;
+    background-color: $keyColor;
+    font-size: 4.5rem;
+    color: #FFF;
+    text-align: center;
+    @include box-sizing(border-box);
+    @include border-radius(50%);
+    @extend .block-center;
+  }
+  h3 {
+    @extend .abel;
+    @extend .uppercase;
+    color: $keyColor;
+    margin-bottom:10px;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}
+
+@media(max-width:768px){
+  .container{
+    justify-content:space-between;
+    flex-direction:column;
+  }
+}
+
+@media(min-width:769px){
+  .comtainer{
+    justify-content:space-between;
+    flex-direction:row;
+  }
+}
+
+
+//Carrer
+#carrer{
+    table{
+      margin:20px 150px;
+        th{
+          height:3.5rem;
+          background-color:$keyColor;
+          font-weight:bole;
+          font-size:1.3rem;
+          padding:0.5rem 1rem;
+          color:white;
+          border-spacing:30px;
+          border-bottom:20px solid $baseColor;
+          border-right:10px solid $baseColor;
+          vertical-align:middle;
+        }
+        td{
+          border-bottom:20px;
+          border-spacing:30px;
+          margin:20px 1px;
+          vertical-align:middle;
+        }
+      }
+    }
+
+@media(max-width:550px){
+#carrer{
+  table{
+    margin:20px;
+    tr{
+      td{
+        padding:20px 0;
+        br{
+          display:none;
+        }
+      }
+    }
+  }
+}
+}
+
+//Profile
+#profile{
+  background-color:$subColor;
+  h2{
+    color:$baseColor;
+  }
+    table{
+      margin:20px 150px;
+        th{
+          height:3.5rem;
+          background-color:$keyColor;
+          font-weight:bole;
+          font-size:1.3rem;
+          padding:0.5rem 1rem;
+          color:white;
+          border-spacing:30px;
+          border-bottom:20px solid $subColor;
+          border-right:10px solid $subColor;
+          vertical-align:middle;
+        }
+        td{
+          border-bottom:20px;
+          border-spacing:30px;
+          margin:20px 1px;
+          vertical-align:middle;
+          color:$baseColor;
+        }
+      }
+    }
+
+@media(max-width:550px){
+#profile{
+  table{
+    text-align:center;
+    display:block;
+    margin:20px 100px;
+    border:0;
+    tr{
+      display:block;
+      border:0;
+      th{
+        display:block;
+        border:0;
+        height:auto;
+      }
+      td{
+        display:block;
+        border:0;
+        height:auto;
+        margin:10px auto;
+        br{
+          display:none;
+        }
+      }
+    }
+  }
+}
+}
+
+// Works
+#works {
+  padding-bottom: 0;
+  h2 {
+    margin-bottom: 50px;
+  }
+  .works-box {
+    width: 33.333333%;
+    float: left;
+    height: 100%;
+    a {
+      display: block;
+      position: relative;
+      .works-box-inner {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #FFF;
+        display: none;
+        div {
+            position: absolute;
+            margin: auto;
+            height: 40%;
+            top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              padding: 10px 20px;
+          }
+        h3 {
+          font-size: 1.6rem;
+          margin: 0 0 5px;
+          font-weight: bold;
+        }
+        small {
+          font-size: 1rem;
+          display: block;
+          margin-bottom: 15px;
+        }
+        .button-readmore {
+          margin: auto;
+          text-align: center;
+          padding: 5px 0;
+          width: 180px;
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          background-color: $keyColor;
+          @extend .abel;
+          @extend .uppercase;
+          @include border-radius(4px);
+          font-size: 1rem;
+          &:hover {
+            background-color: darken($keyColor, 10%);
+          }
+        }
+    }
+      &:hover {
+        .works-box-inner {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+  &::after {
+    content: '';
+      display: block;
+      clear: both;
+    }
+}
+
+@media(max-width:768px){
+  #works{
+      .works-box{
+        width:100%;
+        height:auto;
+        padding:5px 20px;
+      }
+    }
+  }
+  
+  
+
+// Contact
+#contact {
+  ul {
+    text-align: center;
+    margin-top: 60px;
+    li {
+      display: inline-block;
+      font-size: 2.8rem;
+      text-align: center;
+      margin-right: 20px;
+      @include box-sizing(border-box);
+      vertical-align: top;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    .github, .skype {
+      font-size: 3.2rem;
+    }
+    .github i {
+      margin-left: 2px;
+    }
+    a {
+      display: block;
+      width: 50px;
+      height: 50px;
+      color: #FFF;
+      background-color: $keyColor;
+      @include border-radius(50%);
+      &:hover {
+        background-color: darken($keyColor, 10%);
+      }
+    }
+  }
+}
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: $subColor;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+
+/* ！！WORKページ！！
+------------------------------------------------------------*/
+header{
+  background-color:$baseColor;
+  .works_title{
+    font-size:3rem;
+    padding:1rem;
+    color:$baseColor;
+    background-color:$keyColor;
+  }
+}
+
+.work-a{
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:20px;
+    .title{
+      font-weight:auto;
+      font-size:2rem;
+      padding:1rem;
+      .under{
+        border-bottom: dashed 2px $keyColor;
+      }
+    }
+    img{
+      width:60%;
+      height:auto;
+      padding:1rem;
+      box-sizing:border-box;
+    }
+    table{
+      margin:1rem auto 2rem auto;
+      border:0.5px solid $baseColor;
+      tr{
+        td{
+          border:0.5px solid $subColor;
+          width:400px;
+          height:auto;
+          vertical-align:middle;
+          padding:10px;
+      }
+      th{
+        border:0.5px solid $subColor;
+        width:auto;
+        height:auto;
+        vertical-align:middle;
+        font-weight:bold;
+        background-color:#fef5e5;
+        padding:10px;
+      }
+    }
+  }
+}
+
+@media(max-width:550px){
+  .work-a{
+    padding:20px;
+    img{
+      width:100%;
+    }
+    table{
+      display:block;
+      width:100%;
+      margin:0;
+      border:0;
+      tr{
+        display:block;
+        width:100%;
+        th{
+          display:block;
+          width:100%;
+          padding:10px 0;
+          border:0;
+        }
+        td{
+          display:block;
+          width:100%;
+          padding:10px 0;
+          border:0;
+        }
+      }
+    }
+  }
+}
+
+.work-b{
+  background-color:$subColor;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom:20px;
+    .title{
+      font-weight:auto;
+      font-size:2rem;
+      padding:1rem;
+      color:$baseColor;
+      .under{
+        border-bottom: dashed 2px $baseColor;
+      }
+    }
+    img{
+      width:60%;
+      height:auto;
+      padding:1rem;
+      box-sizing:border-box;
+    }
+    table{
+      margin:1rem auto 2rem auto;
+      border:0.5px solid $subColor;
+      tr{
+        th{
+        border:0.5px solid $subColor;
+        width:auto;
+        height:auto;
+        vertical-align:middle;
+        font-weight:bold;
+        background-color:#fef5e5;
+        padding:10px;
+        }
+        td{
+          border:0.5px solid $subColor;
+          width:400px;
+          height:auto;
+          vertical-align:middle;
+          padding:10px;
+          background-color:$baseColor;
+      }
+    }
+  }
+}
+
+@media(max-width:550px){
+  .work-b{
+    padding:20px;
+    img{
+      width:100%;
+    }
+    table{
+      display:block;
+      width:100%;
+      margin:0;
+      tr{
+        display:block;
+        width:100%;
+        th{
+          display:block;
+          width:100%;
+          padding:10px 0;
+        }
+        td{
+          display:block;
+          width:100%;
+          padding:10px 0;
+        }
+      }
+    }
+  }
+}
