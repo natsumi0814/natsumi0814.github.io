@@ -180,7 +180,8 @@ section {
   #profile h2 {
     color: #fdfcf6; }
   #profile table {
-    margin: 20px auto; }
+    margin: 20px auto;
+    text-align: center; }
     #profile table th {
       height: 3.5rem;
       background-color: #eb6a7a;
