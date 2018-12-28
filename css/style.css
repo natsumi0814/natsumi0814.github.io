@@ -68,27 +68,42 @@ a {
     background-color: #4c4c4c;
     color: #FFF; }
 
-header .profile {
-  width: 60%;
-  margin: 0 auto;
-  padding: 60px 0;
-  clear: both; }
-header .site-title {
-  font-size: 1.8rem;
-  line-height: normal; }
-  header .site-title span {
-    display: block;
-    font-size: 4.2rem;
-    color: #eb6a7a; }
-header .profile-icon {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
+header {
+  text-align: center; }
+  header .profile {
+    width: 60%;
+    margin: 0 auto;
+    padding: 60px 0 10px 0;
+    clear: both; }
+  header .site-title {
+    font-size: 1.8rem;
+    line-height: normal; }
+    header .site-title span {
+      display: block;
+      font-size: 4.2rem;
+      color: #eb6a7a; }
+  header .profile-icon {
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 30px auto;
+    border: dashed 2px #eb6a7a; }
+  header p {
+    display: inline-block;
+    font-size: 1.6rem; }
+
+header .blog {
+  border: 1px solid #eb6a7a;
+  border-radius: 5px;
+  background-color: #eb6a7a;
   padding: 10px;
-  margin: 30px auto;
-  border: dashed 2px #eb6a7a; }
-header p {
-  font-size: 1.6rem; }
+  text-align: center;
+  color: #fdfcf6;
+  width: 150px;
+  margin: 20px auto 40px auto; }
+  header .blog a {
+    color: #fdfcf6; }
 
 /* Contents
 ------------------------------------------------------------*/

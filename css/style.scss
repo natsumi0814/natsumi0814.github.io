@@ -81,7 +81,7 @@ header {
   .profile {
     width: 60%;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 60px 0 10px 0;
     clear: both;
   }
   .site-title {
@@ -99,8 +99,26 @@ header {
     margin: 30px auto;
     border:dashed 2px #eb6a7a;
   }
+  text-align:center;
   p {
+    display:inline-block;
     font-size: 1.6rem;
+  }
+}
+
+header{
+  .blog{
+    border: 1px solid $keyColor;
+    border-radius: 5px;
+    background-color:$keyColor;
+    padding: 10px;
+    text-align: center;
+    color:$baseColor;
+    width: 150px;
+    margin: 20px auto 40px auto;
+    a{
+      color:$baseColor;
+    }
   }
 }
 
